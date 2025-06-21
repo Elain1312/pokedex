@@ -1,0 +1,11 @@
+los cambios fueron: 
+
+en views.py hicimos funciones para que cuando entrás a la página, se muestre la lista de pokemones, acomodamos el buscador que no mostraba nada. 
+
+en home.html para que carguen las imagenes de los pokemon, se ve el tipo de pokemon, el peso, altura y nivel de experiencia
+
+en transport.py para limitar la cantidad de pokemon a 30, a 150 tardaba mucho
+
+en settings.py para cargar el caché (una vez cargadas las imagenes la página va más rápido)
+
+en settings.py (main) agregué la memoria del caché, solo la primera vez tarda, después va bien.

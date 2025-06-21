@@ -120,3 +120,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # VARIABLES QUE INTEGRAN LOS REDIRECTS DE AUTH
 LOGIN_REDIRECT_URL = 'index-page'
 LOGOUT_REDIRECT_URL = 'index-page'
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake', # Un nombre único para tu caché
+        'TIMEOUT': 3600, # Tiempo en segundos antes de que la caché expire (1 hora)
+        'OPTIONS': {
+            'MAX_ENTRIES': 1000 # Número máximo de entradas en la caché
+        }
+    }
+}
