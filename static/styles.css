@@ -1,142 +1,186 @@
-body {
-    color: #566787;
-    background: #f5f5f5;
-    font-family: 'Roboto', sans-serif;
+/* --- ESTILOS PARA LOS BORDES DE TIPOS DE POKÉMON --- */
+
+/* Estilos generales para todos los badges de tipo */
+.pokemon-type-badge {
+    margin-right: 5px;   /* Espacio entre los tipos */
+    padding: .3em .6em;  /* Ajustar padding para que se vea bien */
+    border-radius: .25rem; /* Bordes redondeados */
+    font-weight: bold;   /* Texto en negrita */
+    color: white;        /* Color de texto predeterminado (blanco) */
+    border: 2px solid;   /* Borde sólido, el color lo definirá cada tipo */
+    display: inline-block; /* Para que margin-right funcione y los tamaños sean uniformes */
+    min-width: 65px;     /* Ancho mínimo para que los badges no sean demasiado pequeños */
+    text-align: center;  /* Centrar el texto */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Sombra para que el texto resalte */
+    margin-bottom: 5px; /* Espacio debajo de cada tipo si hay varios */
+    vertical-align: middle; /* Alineación vertical */
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Sombra suave para los badges */
 }
 
-.table-responsive {
-    margin: 30px 0;
+/* Colores de bordes y fondo para cada tipo específico */
+
+.type-normal {
+    background-color: #A8A77A; /* Color de fondo */
+    border-color: #7d7a5b; /* Color del borde, más oscuro */
 }
 
-.table-wrapper {
-    min-width: 1000px;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+.type-fire {
+    background-color: #EE8130;
+    border-color: #c9651a;
 }
 
-.table-title {
-    padding-bottom: 10px;
-    margin: 0 0 10px;
-    min-width: 100%;
+.type-water {
+    background-color: #6390F0;
+    border-color: #3b6cd4;
 }
 
-.table-title h2 {
-    margin: 8px 0 0;
-    font-size: 22px;
+.type-grass {
+    background-color: #7AC74C;
+    border-color: #5d9e33;
 }
 
-.search-box {
-    position: relative;
-    float: right;
+.type-electric {
+    background-color: #F7D02C;
+    border-color: #d1b423;
 }
 
+.type-ice {
+    background-color: #96D9D6;
+    border-color: #79b0ae;
+}
+
+.type-fighting {
+    background-color: #C22E28;
+    border-color: #a01f1b;
+}
+
+.type-poison {
+    background-color: #A33EA1;
+    border-color: #832e81;
+}
+
+.type-ground {
+    background-color: #E2BF65;
+    border-color: #c0a150;
+}
+
+.type-flying {
+    background-color: #A98FF3;
+    border-color: #8b6fd0;
+}
+
+.type-psychic {
+    background-color: #F95587;
+    border-color: #d43b67;
+}
+
+.type-bug {
+    background-color: #A6B91A;
+    border-color: #849313;
+}
+
+.type-rock {
+    background-color: #B6A136;
+    border-color: #92812a;
+}
+
+.type-ghost {
+    background-color: #735797;
+    border-color: #5c447a;
+}
+
+.type-dragon {
+    background-color: #6F35FC;
+    border-color: #5425d0;
+}
+
+.type-steel {
+    background-color: #B7B7CE;
+    border-color: #9595a8;
+}
+
+.type-fairy {
+    background-color: #D685AD;
+    border-color: #b0698f;
+}
+
+/* --- FIN ESTILOS PARA BORDES DE TIPOS --- */
+
+/* --- Pequeñas mejoras estéticas adicionales para tus tarjetas --- */
+
+.card {
+    border-radius: 15px; /* Bordes más redondeados para las tarjetas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para que resalte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave al interactuar */
+    overflow: hidden; /* Asegura que la imagen redondeada no se salga del borde */
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Levanta un poco la tarjeta al pasar el mouse */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* Sombra más grande al pasar el mouse */
+}
+
+.card-img-top {
+    border-top-left-radius: 15px; /* Redondear las esquinas superiores de la imagen */
+    border-top-right-radius: 15px;
+    /* Ajusta el objeto de ajuste de la imagen para que se vea mejor */
+    object-fit: contain; /* Para que la imagen se adapte sin cortarse ni distorsionarse */
+    background-color: #f0f0f0; /* Fondo claro si la imagen tiene transparencia */
+    padding: 10px; /* Un pequeño padding alrededor de la imagen dentro del card */
+}
+
+.card .col-md-4 { /* Si tienes la imagen en una columna de la tarjeta */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px; /* Aumenta el padding para que la imagen tenga más espacio */
+}
+
+
+.card-title {
+    font-weight: bold; /* Nombre de Pokémon en negrita */
+    font-size: 1.5rem; /* Tamaño de fuente un poco más grande para el título */
+    color: #333; /* Un color oscuro para los títulos */
+}
+
+/* Mejoras para el cuerpo del card */
+.card-body {
+    padding-left: 20px; /* Un poco más de padding a la izquierda */
+}
+
+.card-text small {
+    color: #777; /* Un color de texto más suave para la información pequeña */
+}
+
+/* Ajustes para el pie de la tarjeta (donde va el botón de favoritos) */
+.card-footer {
+    background-color: #f8f9fa; /* Fondo ligeramente diferente para el footer */
+    border-top: 1px solid #eee; /* Un borde superior sutil */
+    padding: 10px 15px; /* Más padding */
+}
+
+/* Mejora para los botones del filtro (FUEGO, AGUA, PLANTA) */
+.d-flex.gap-1.col-2.mx-auto.mb-3 form button {
+    border-radius: 20px; /* Bordes más redondeados para los botones de tipo */
+    padding: 8px 20px; /* Más padding para que sean más grandes */
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+.d-flex.gap-1.col-2.mx-auto.mb-3 form button:hover {
+    transform: translateY(-2px); /* Un pequeño levantamiento al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Mejora para el buscador */
 .search-box input {
-    height: 34px;
-    border-radius: 20px;
-    padding-left: 35px;
-    border-color: #ddd;
-    box-shadow: none;
-}
-
-.search-box input:focus {
-    border-color: #3FBAE4;
+    border-radius: 30px; /* Más redondeado */
+    padding-left: 40px; /* Ajusta el padding para el icono */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .search-box i {
-    color: #a0a5b1;
-    position: absolute;
-    font-size: 19px;
-    top: 8px;
-    left: 10px;
-}
-
-table.table tr th,
-table.table tr td {
-    border-color: #e9e9e9;
-}
-
-table.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #fcfcfc;
-}
-
-table.table-striped.table-hover tbody tr:hover {
-    background: #f5f5f5;
-}
-
-table.table th i {
-    font-size: 13px;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-table.table td:last-child {
-    width: 130px;
-}
-
-table.table td a {
-    color: #a0a5b1;
-    display: inline-block;
-    margin: 0 5px;
-}
-
-table.table td a.view {
-    color: #03A9F4;
-}
-
-table.table td a.edit {
-    color: #FFC107;
-}
-
-table.table td a.delete {
-    color: #E34724;
-}
-
-table.table td i {
-    font-size: 19px;
-}
-
-.pagination {
-    float: right;
-    margin: 0 0 5px;
-}
-
-.pagination li a {
-    border: none;
-    font-size: 95%;
-    width: 30px;
-    height: 30px;
-    color: #999;
-    margin: 0 2px;
-    line-height: 30px;
-    border-radius: 30px !important;
-    text-align: center;
-    padding: 0;
-}
-
-.pagination li a:hover {
-    color: #666;
-}
-
-.pagination li.active a {
-    background: #03A9F4;
-}
-
-.pagination li.active a:hover {
-    background: #0397d6;
-}
-
-.pagination li.disabled i {
-    color: #ccc;
-}
-
-.pagination li i {
-    font-size: 16px;
-    padding-top: 6px
-}
-
-.hint-text {
-    float: left;
-    margin-top: 6px;
-    font-size: 95%;
+    left: 15px; /* Ajusta la posición del icono */
+    font-size: 20px; /* Icono un poco más grande */
 }
