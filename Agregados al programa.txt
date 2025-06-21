@@ -9,3 +9,5 @@ en transport.py para limitar la cantidad de pokemon a 30, a 150 tardaba mucho
 en settings.py para cargar el caché (una vez cargadas las imagenes la página va más rápido)
 
 en settings.py (main) agregué la memoria del caché, solo la primera vez tarda, después va bien.
+
+en styles.css cambié el estilo, la fuente, cambié el contorno de las imágenes de los pokemon, mejora del estilo en general.
